@@ -9,11 +9,22 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This chips takes 7 entry + clock to create a LED animation using 8 LEDs on the output.
 
 ## How to test
 
-Explain how to use your project
+You just need to set values as the fallowed:
+
+  Inputs:
+  - CLK — advances the sequence on each rising edge
+  - RST — resets to pattern 0
+  - EN — enable (pauses the sequence when low)
+  - DIR — direction (forward / reverse)
+  - MODE[2:0] — selects one of up to 8 pattern sets (chase, bounce, blink, etc.)
+  - SPEED[1:0] — clock divider selection (full speed, /2, /4, /8)
+
+  Outputs:
+  - OUT[7:0] — 8-bit pattern driving LEDs or downstream logic
 
 ## External hardware
 
